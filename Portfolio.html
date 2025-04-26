@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+    <link rel="stylesheet" href="Portfolio.css">
+
+     <!-- Other meta tags and links -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init({
+        publicKey: "PNWznV4VWb7AZYx9y"
+      });
+    })();
+  </script>
+</head>
+<body>
+    <header class="header">
+        <div class="my-name">Feysal</div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+          <button class="call-to-action" onclick="smoothScroll('#contact')">Hire Me</button>
+            <div class="my-photo">
+              <img class="my-image" src="asset-folder/profile.jpg">
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </header>
+    
+    <div class="header-spacer"></div>
+    
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1 class="name glitch">Feysal</h1>
+          <h2 class="title gradient-text1">Creative Developer</h2>
+          <a href="asset-folder/Feysal_Jeylan_CV.pdf.pdf" download class="work-button" id="viewWorkButn">
+            <span>Download CV</span>
+          </a>
+          
+        </div>
+      
+        <!--Right Column: visual Element-->
+        <div class="hero-visual">
+          <div class="floating-box">
+            <img class="box-image" src="asset-folder/better_adjusted_image.png">
+          </div>
+        </div>
+        <!--About me section-->
+      </section>
+      <section id="about">
+        <div class="about-visual">
+          <div class="about-image">
+            <img class="image-test" src="asset-folder/portfolio_image_v2.webp">
+            <div class="image-border"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h1 class="about-heading">About Me</h1>
+          <p class="animated-paragraph">Hi, I'm Feysal, a passionate <strong class="gradient-text">front-end developer</strong>  and a <strong class="gradient-text"> Business Administration and Information System (BAIS) student</strong> at Addis Ababa University. I specialize in building <strong class="gradient-text">visually appealing, user-friendly websites</strong>  and love turning my <strong class="gradient-text"> imagination into reality</strong> through code. <br> I'm a  <strong class="gradient-text">self-thought web developer</strong>, constantly learning through <strong class="gradient-text"> online tools and YouTube tutorials</strong> to refine my skills. What drives me most is <strong class="gradient-text">problem-solving and imaginative creativity—</strong> I enjoy tackling real-world challenges and bringing innovative ideas to life. <br> With a unique <strong class="gradient-text"> approach and style</strong>, I aim to to develop 
+<strong class="gradient-text">business-driven sortware and cutting -edge web applicatios</strong> that make an impact. Let's build something cool! </p>
+        </div>
+      </section>
+      <section id="projects">
+        <h2 class="project-heading">My Projects</h2>
+        <div class="project-grid">
+          <!--Project card 1-->
+          <div class="project-card">
+            <img src="asset-folder/ChatGPT Image Apr 18, 2025, 02_59_11 PM.png" class="project-thumbnail">
+            <h3>To-Do-List App</h3>
+            <p>A minimal task manager built with HTML, CSS, and JavaScript. Lets users add and delete tasks with dates. Clean design and responsive layout.</p>
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>CSS</span>
+              <span>HTML</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Feysi-best/Mela-Software-Project.git">GitHub</a>
+            </div>
+          </div>
+          
+          <!-- Project Card 2-->
+          <div class="project-card">
+            <img src="asset-folder/rock-paper-scissors-thumbnail-v2.png" class="project-thumbnail">
+            <h3>Rock-Paper-Scissors</h3>
+            <p>A fun and responsive Rock Paper Scissors game built while learning JavaScript. It features real-time score updates and clean UI interactions, showcasing my progress in web development.</p>
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>CSS</span>
+              <span>HTML</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Feysi-best/Rock-Paper-Scissors-Game-">GitHub</a>
+            </div>
+          </div>
+          
+          <!--Project Card 3-->
+          <div class="project-card">
+            <img src="asset-folder/final_adjusted_screenshot.png" alt="Blog App Thumbnail" class="project-thumbnail">
+            <h3> Mela-Software <!-- I'll change it later if i wanted--> </h3>
+            <p>A clean, responsive landing page for an edtech brand, built with HTML, CSS, and JavaScript. Highlights a bold theme and user-friendly layout to reflect innovation and technology.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Feysi-best/Mela-Software-Project.git">GitHub</a>
+            </div>
+          </div>
+          
+          <!--Project-Card 4 -->
+          <div class="project-card">
+            <img src="asset-folder/E-Commerce.png" alt="Blog App Thumbnail" class="project-thumbnail">
+            <h3>Amazon Clone UI</h3>
+            <p>A responsive Amazon-style homepage clone built with HTML, CSS, and JavaScript. Focused on layout, navigation, and product display.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Feysi-best/amazon-clone-ecommerce/upload/main">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      <section id="skills">
+        <h2 class="skill-heading">My Skills</h2>
+        <div class="skill-grid">
+          <!-- Skill Card 1 -->
+          <div class="skill-card">
+            <i class="fas fa-code" style="font-size: 40px; color: #64ffda;"></i>
+            <h3>Front-End Development</h3>
+            <p> Skilled in building interactive and responsive web interfaces using HTML, CSS and JavaScript. Confartable with modern design principles and creating user-friendly experiences. </p>
+            <a href="#features" class="cta-button" id="learnMoreBtn">
+              <span class="text">Learn More</span>
+              <span class="hover-effect"></span>
+              <span class="icon">→</span>
+            </a>
+          </div>
+          <!-- Skill Card 2 -->
+          <div class="skill-card">
+            <i class="fas fa-server" style="font-size: 40px; color: #64ffda;"></i>
+            <h3>Back-End Development (Coming Soon)</h3>
+            <p> Learning <strong>Git/GitHub, databases, APIs, and backend frameworks</strong> to transition to full-stack development  and build complete web applications.</p>
+            <a href="#features" class="cta-button" id="learnMoreBtn">
+              <span class="text">Learn More</span>
+              <span class="hover-effect"></span>
+              <span class="icon">→</span>
+            </a>
+          </div>
+          <!-- Skill Card 3 -->
+          <div class="skill-card">
+            <i class="fas fa-chart-line" style="font-size: 40px; color: #64ffda;"></i>
+            <h3>Data Analysis</h3>
+            <p> Skilled in <strong>data analysis, system analysis, systems thinking, and problem-solving,</strong> applying structured approaches to optimize business and technology solutions. <p>
+              <a href="#features" class="cta-button" id="learnMoreBtn">
+                <span class="text">Learn More</span>
+                <span class="hover-effect"></span>
+                <span class="icon">→</span>
+              </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <form class="contact-form" id="contactForm">
+          <h2 class="contact-title">Get In Touch</h2>
+          
+          <div class="input-group">
+            <input class="form-input" type="text" id="name" required>
+            <label for="name">Your Name</label>
+            <div class="underline"></div>
+            <div class="error-message" id="name-error"></div>
+          </div>
+          
+          <div class="input-group">
+            <input class="form-input" type="email" id="email" required>
+            <label for="email">Email Address</label>
+            <div class="underline"></div>
+            <div class="error-message" id="email-error"></div>
+          </div>
+          
+          <div class="input-group">
+            <textarea class="form-message" id="message" required></textarea>
+            <label for="message">Your Message</label>
+            <div class="underline"></div>
+            <div class="error-message" id="message-error"></div>
+          </div>
+          
+          <button class="submit-btn" type="submit">
+            <span>Send Message</span>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"></path>
+            </svg>
+          </button>
+      
+          <div class="social-links">
+            <p>Or find me on:</p>
+            <div class="social-icons">
+              <a href="https://github.com/Feysi-best" target="_blank" class="social-icon" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/feysal-jeylan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://x.com/Feysal25?t=gaFbH1EM3TQmKISyBUavpg&s=09" target="_blank" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/naafsiif_sabaa/?utm_source=qr&r=nametag" target="_blank" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </form>
+      
+        <div class="success-message" id="successMessage">
+          <div class="success-check">
+            <svg viewBox="0 0 52 52">
+              <circle cx="26" cy="26" r="25" fill="none"/>
+              <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+          </div>
+          <h3>Message Sent!</h3>
+          <p>I'll get back to you within 24 hours</p>
+          <button class="close-success">Send Another</button>
+        </div>
+      </section>
+    </main>
+    <!--feature section-->
+
+    <section id="features" class="fade-in-section">
+      <h2>Why Work With Me</h2>
+      <div class="feature-grid">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <i class="fas fa-code"></i>
+          <h3>Clean Frontend</h3>
+          <p>Semantic HTML5, modular CSS, and vanilla JavaScript ES6+</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <i class="fas fa-server"></i>
+          <h3>Backend Ready</h3>
+          <p>Node.js and Express foundations for full-stack transition</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <i class="fas fa-brain"></i>
+          <h3>BAIS Advantage</h3>
+          <p>Business analysis, System analysis meets technical execution</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="site-footer">
+      <div class="footer-wave"></div>
+      
+      <div class="footer-content">
+        <!-- Column 1: Branding -->
+        <div class="footer-col">
+          <h3 class="footer-logo"><span>Feysal</span></h3>
+          <p class="footer-tagline">Turning ideas into pixel-perfect reality</p>
+          <div class="footer-social">
+            <a href="https://github.com/Feysi-best" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/feysal-jeylan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://dribbble.com/feysal25" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+            <a href="https://x.com/Feysal25?t=gaFbH1EM3TQmKISyBUavpg&s=09" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#skill" class="footer-link">Skills</a></li>
+            <li><a href="#" class="footer-link">Projects</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3: Contact CTA -->
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <a href="#" onclick="window.open('https://mail.google.com/mail/?view=cm&to=feysaljeylan67@gmail.com', '_blank')" class="footer-email">
+            feysaljeylan67@gmail.com
+        </a>
+          <button class="footer-cta" onclick="smoothScroll('#contact')">
+            Let's Collaborate
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Feysal. All rights reserved</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+
+</body>
+</html>
