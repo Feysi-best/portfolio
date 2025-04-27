@@ -308,23 +308,18 @@ body {
   text-decoration: none; 
   text-align: center;
 }
-
-/* Hover Effects */
 .work-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(100, 255, 218, 0.4);
 }
 
-/* Active/Click Effect */
 .work-button:active {
   transform: translateY(-1px);
 }
 
-/* Magnetic Effect (requires JS) */
 .work-button.magnetic {
   transition: transform 0.2s ease;
 }
-/* Scroll animation for work section */
 #work {
   scroll-margin-top: 80px; /* Adjust based on header height */
 }
@@ -457,7 +452,6 @@ body {
     font-size: 2.5rem;
   }
 }
-/*Responsive */
 @media (min-width: 834px) and (max-width: 1194px) {
   #about {
     gap: 1.5rem;
@@ -465,12 +459,12 @@ body {
   }
   
   .about-text {
-    flex-basis: 60%; /* Force more text space */
+    flex-basis: 60%; 
   }
   
   .about-text p {
-    font-size: 1.1rem; /* Lock font size */
-    word-spacing: -0.5px; /* Tighten spacing */
+    font-size: 1.1rem; 
+    word-spacing: -0.5px; 
   }
 }
 
@@ -481,7 +475,7 @@ body {
   }
   
   .about-visual {
-    margin: 0 auto; /* Center image */
+    margin: 0 auto; 
   }
 }
 /* Project Section */
@@ -625,7 +619,6 @@ body {
   cursor: pointer;
 }
 
-/* Hover effect layer */
 .hover-effect {
   position: absolute;
   top: 0;
@@ -643,7 +636,6 @@ body {
   display: inline-block;
 }
 
-/* Hover states */
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
@@ -657,12 +649,10 @@ body {
   transform: translateX(4px);
 }
 
-/* Click animation */
 .cta-button:active {
   transform: translateY(1px) scale(0.98);
 }
 
-/* Ripple effect (added via JS) */
 .ripple {
   position: absolute;
   border-radius: 50%;
@@ -781,7 +771,6 @@ label {
   transition: width 0.4s ease;
 }
 
-/* Focus Effects */
 .form-input:focus, .form-message:focus {
   outline: none;
   border-bottom-color: transparent;
@@ -801,7 +790,6 @@ label {
   width: 100%;
 }
 
-/* Submit Button */
 .submit-btn {
   background: linear-gradient(135deg, #3b82f6, #10b981);
   color: white;
@@ -1003,7 +991,6 @@ label {
   background: rgba(59, 130, 246, 0.2);
 }
 
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -1022,8 +1009,6 @@ label {
   opacity: 1;
   visibility: visible;
 }
-
-
 
 
 #features {
@@ -1060,7 +1045,6 @@ label {
   margin: 15px 0;
 }
 
-/* Gradient border for section title */
 #features h2 {
   position: relative;
   display: inline-block;
@@ -1119,7 +1103,7 @@ label {
 }
 
 .footer-logo span {
-  color: #64ffda; /* Your teal */
+  color: #64ffda;
 }
 
 .footer-social a {
