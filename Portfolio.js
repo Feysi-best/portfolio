@@ -1,37 +1,79 @@
 
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav');
-const ctaButton = document.querySelector('.call-to-action');
-const myPhoto = document.querySelector('.my-photo');
-const myName = document.querySelector('.my-name');
 
-let isMenuOpen = false;
+  
+// Hamburger Menu Functionality - Optimized for your HTML
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all elements with null checks
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  const ctaButton = document.querySelector('.call-to-action');
+  const myPhoto = document.querySelector('.my-photo');
+  const myName = document.querySelector('.my-name');
 
-hamburger.addEventListener('click', () => {
-  isMenuOpen = !isMenuOpen;
-  
-  // Toggle menu
-  navLinks.classList.toggle('show', isMenuOpen);
-  
-  // Toggle header elements
-  ctaButton.classList.toggle('hidden-button', isMenuOpen);
-  myPhoto.classList.toggle('hidden-photo', isMenuOpen);
-  myName.classList.toggle('my-name-top', isMenuOpen);
-  
-  // Update hamburger icon
-  hamburger.textContent = isMenuOpen ? '✕' : '☰';
-});
+  // Only proceed if essential elements exist
+  if (hamburger && nav) {
+    let isMenuOpen = false;
 
-// Close menu by clicking outside
-document.addEventListener('click', (e) => {
-  if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && isMenuOpen) {
-    isMenuOpen = false;
-    navLinks.classList.remove('show');
-    ctaButton.classList.remove('hidden-button');
-    myPhoto.classList.remove('hidden-photo');
-    myName.classList.remove('my-name-top');
-    hamburger.textContent = '☰';
+    // Toggle Menu Function
+    function toggleMenu() {
+      isMenuOpen = !isMenuOpen;
+      
+      // Toggle nav visibility
+      nav.classList.toggle('show', isMenuOpen);
+      
+      // Toggle other header elements (with optional chaining)
+      ctaButton?.classList.toggle('hide', isMenuOpen);
+      myPhoto?.classList.toggle('hide', isMenuOpen);
+      myName?.classList.toggle('move-up', isMenuOpen);
+      
+      // Update hamburger icon
+      hamburger.textContent = isMenuOpen ? '✕' : '☰';
+      
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    }
+
+    // Close Menu Function
+    function closeMenu() {
+      if (isMenuOpen) {
+        isMenuOpen = false;
+        nav.classList.remove('show');
+        ctaButton?.classList.remove('hide');
+        myPhoto?.classList.remove('hide');
+        myName?.classList.remove('move-up');
+        hamburger.textContent = '☰';
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Hamburger Click Event
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when clicking nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      if (isMenuOpen && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (isMenuOpen && e.key === 'Escape') {
+        closeMenu();
+      }
+    });
+  } else {
+    console.error('Missing essential elements: Check if .hamburger and .nav exist in your HTML');
   }
 });
 //Work Button//
