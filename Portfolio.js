@@ -2,35 +2,28 @@
 
 
   
-// Hamburger Menu Functionality - Optimized for your HTML
+// Hamburger Menu
 document.addEventListener('DOMContentLoaded', function() {
-  // Get all elements with null checks
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav');
   const ctaButton = document.querySelector('.call-to-action');
   const myPhoto = document.querySelector('.my-photo');
   const myName = document.querySelector('.my-name');
 
-  // Only proceed if essential elements exist
   if (hamburger && nav) {
     let isMenuOpen = false;
 
-    // Toggle Menu Function
     function toggleMenu() {
       isMenuOpen = !isMenuOpen;
       
-      // Toggle nav visibility
       nav.classList.toggle('show', isMenuOpen);
       
-      // Toggle other header elements (with optional chaining)
       ctaButton?.classList.toggle('hide', isMenuOpen);
       myPhoto?.classList.toggle('hide', isMenuOpen);
       myName?.classList.toggle('move-up', isMenuOpen);
       
       // Update hamburger icon
       hamburger.textContent = isMenuOpen ? '✕' : '☰';
-      
-      // Prevent scrolling when menu is open
       document.body.style.overflow = isMenuOpen ? 'hidden' : '';
     }
 
@@ -53,13 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleMenu();
     });
 
-    // Close when clicking nav links
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', closeMenu);
     });
 
-    // Close when clicking outside
     document.addEventListener('click', function(e) {
       if (isMenuOpen && !nav.contains(e.target) && !hamburger.contains(e.target)) {
         closeMenu();
@@ -83,15 +74,13 @@ document.querySelectorAll('.work-button').forEach(button => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    // Calculate center
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    // Calculate distance from center
     const distanceX = x - centerX;
     const distanceY = y - centerY;
     
-    // Apply transform (magnetic effect)
+    // Apply transform (magnetic effect to the bottun)
     button.style.transform = `translate(${distanceX * 0.1}px, ${distanceY * 0.1}px)`;
   });
   
@@ -100,7 +89,7 @@ document.querySelectorAll('.work-button').forEach(button => {
   });
 });
 
-/* About Section */
+// About Section
 const aboutSection = document.querySelector('#about');
 const aboutText = document.querySelector('.about-text');
 const paragraphs = document.querySelectorAll('.animated-paragraph');
@@ -108,7 +97,6 @@ const paragraphs = document.querySelectorAll('.animated-paragraph');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Only trigger once
       observer.unobserve(entry.target);
       
       aboutText.classList.add('visible');
@@ -126,7 +114,7 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(aboutSection);
 
-/* Contact Section */
+// Contact Section 
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -140,8 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     let isValid = true;
-
-    // Validate name
+    
     const name = document.getElementById('name');
     const nameError = document.getElementById('name-error');
     if (name.value.trim() === '') {
@@ -176,13 +163,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (isValid) {
-      // Show loading state
       const submitBtn = form.querySelector('.submit-btn');
       const originalBtnText = submitBtn.querySelector('span').textContent;
       submitBtn.querySelector('span').textContent = 'Sending...';
       submitBtn.disabled = true;
 
-      // Prepare EmailJS parameters
+      // Prepare Emailjs parameters
       const params = {
         from_name: name.value.trim(),
         from_email: email.value.trim(),
@@ -202,28 +188,23 @@ document.addEventListener('DOMContentLoaded', function() {
           alert('Failed to send message. Please try again later.');
         })
         .finally(() => {
-          // Reset button state
           submitBtn.querySelector('span').textContent = originalBtnText;
           submitBtn.disabled = false;
         });
     }
   });
 
-   // Close success message
    document.querySelector('.close-success').addEventListener('click', function() {
     successMessage.classList.remove('active');
     overlay.classList.remove('active');
   });
-
-  // Close when clicking overlay
   overlay.addEventListener('click', function() {
     successMessage.classList.remove('active');
     overlay.classList.remove('active');
   });
 });
 
-/*there was a code that i removed from here and it was commented out prevoiuly*/
-// Let's check
+// there was a code that i remomed from here and i commented out previously i don't why
 
 document.addEventListener('DOMContentLoaded', () => {
   const featuresSection = document.querySelector('#features');
@@ -238,14 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(featuresSection);
 });
- /* Hire CTA */
+ // Hire CTA 
  function smoothScroll(target) {
   document.querySelector(target).scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
   
-  // Pulse animation on target section
   const contactSection = document.querySelector(target);
   contactSection.style.animation = 'pulse-highlight 2s ease';
   setTimeout(() => contactSection.style.animation = '', 2000);
